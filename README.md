@@ -9,7 +9,7 @@
   - ui.router
   - lodash
 - Grunt
-  - es6
+  - es6 (babel)
   - concat
   - jshint
   - less
