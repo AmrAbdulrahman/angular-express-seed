@@ -1,0 +1,28 @@
+{
+  "name": "angular-express-seed",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AbuMuslimAmr/angular-express-seed",
+  "authors": [
+    "Amr Abdulrahman <abu.muslim.amr@gmail.com>"
+  ],
+  "description": "angular-express-seed",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "jquery": "~2.1.4",
+    "ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "jquery-ui": "~1.11.4",
+    "restangular": "~1.5.1",
+    "angular-bootstrap": "~0.14.3",
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}

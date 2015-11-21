@@ -1,0 +1,20 @@
+{
+  "build": "build",
+  "src": "src",
+  "bower": {
+    "src": "bower_components/**/*.*"
+  },
+  "ngApp": {
+    "src": "app/**/*.*"
+  },
+  "js": {
+    "src": "src/**/*.js"
+  },
+  "styles": {
+    "src": "src/styles/less/*.less"
+  },
+  "html": {
+    "src": "src/**/*.html"
+  },
+  "tasksPath": "./grunt/"
+}
