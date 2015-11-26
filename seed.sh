@@ -1,6 +1,11 @@
 #!/bin/bash
 
 #=============================================================
+# Credits
+# Thanks to Mahmoud Adel: https://github.com/mahmoudadel2
+# He helped me building this script
+
+#=============================================================
 # Configuration Section
 
 # Base configuratioins, Don't change!
