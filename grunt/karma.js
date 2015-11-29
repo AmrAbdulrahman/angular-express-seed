@@ -4,8 +4,19 @@ module.exports = function(grunt, config) {
       options: {
         frameworks: ['jasmine'],
         singleRun: true,
-        browsers: ['PhantomJS'],
-        files: require('./scripts').karma
+        browsers: [
+          'PhantomJS',
+          'Chrome', 'ChromeNoSecurity',
+          'Firefox', 'FirefoxDeveloper', 'FirefoxAurora', 'FirefoxNightly',
+          'OperaClassic'
+        ],
+        files: require('./scripts').karma,
+        customLaunchers: {
+          ChromeNoSecurity: {
+            base: 'Chrome',
+            flags: ['--disable-web-security']
+          }
+        }
       }
     }
   };

@@ -31,7 +31,10 @@
     "grunt-karma": "^0.12.1",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.6",
+    "karma-opera-launcher": "^0.3.0",
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "^1.9.19"
   }

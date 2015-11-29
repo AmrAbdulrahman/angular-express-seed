@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     'copy',
     'less',
     'concat',
-    'babel',
+    'babel:dist',
     'watch'
   ]);
 
