@@ -23,6 +23,7 @@
     "jquery-ui": "~1.11.4",
     "restangular": "~1.5.1",
     "angular-bootstrap": "~0.14.3",
-    "font-awesome": "fontawesome#~4.4.0"
+    "font-awesome": "fontawesome#~4.4.0",
+    "angular-mocks": "~1.4.8"
   }
 }

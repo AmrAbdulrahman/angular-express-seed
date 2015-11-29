@@ -1,21 +1,11 @@
 module.exports = function(grunt) {
-  var config = grunt.file.readJSON('grunt-config.json');
+  var config = grunt.file.readJSON('./grunt/config.json');
 
   function loadGruntTask(name) {
     return require(config.tasksPath + name)(grunt, config);
   }
 
-  // Project configuration.
-  grunt.initConfig({
-    clean: loadGruntTask('clean'),
-    jshint: loadGruntTask('jshint'),
-    copy: loadGruntTask('copy'),
-    less: loadGruntTask('less'),
-    watch: loadGruntTask('watch'),
-    concat: loadGruntTask('concat'),
-    babel: loadGruntTask('babel')
-  });
-
+  // Plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -23,6 +13,19 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-babel');
+  grunt.loadNpmTasks('grunt-karma');
+  
+  // Configurations
+  grunt.initConfig({
+    clean: loadGruntTask('clean'),
+    jshint: loadGruntTask('jshint'),
+    copy: loadGruntTask('copy'),
+    less: loadGruntTask('less'),
+    watch: loadGruntTask('watch'),
+    concat: loadGruntTask('concat'),
+    babel: loadGruntTask('babel'),
+    karma: loadGruntTask('karma'),
+  });
 
   grunt.registerTask('default', [
     'clean',
@@ -32,5 +35,12 @@ module.exports = function(grunt) {
     'concat',
     'babel',
     'watch'
+  ]);
+
+  grunt.registerTask('test', [  
+    'clean',
+    'jshint:all',
+    'babel:all',
+    'karma'
   ]);
 };

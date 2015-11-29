@@ -7,6 +7,14 @@
   "browser": true,
   "globals": {
     "jQuery": true,
-    "angular": true
+    "angular": true,
+    "_": true,
+
+    "module": true,
+    "describe": true,
+    "beforeEach": true,
+    "inject": true,
+    "it": true,
+    "expect": true
   }
 }

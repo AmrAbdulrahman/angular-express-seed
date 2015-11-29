@@ -17,7 +17,8 @@ TEMP_FILE_PATH=/tmp/find-n-replace.tmp
 NEW_PROJ_REMOTE=git@github.com:AbuMuslimAmr/hanaa.git
 NEW_PROJ_NAME=hanaa
 INITIAL_COMMIT_MESSAGE="Oh goood!"
-FIND_KEYS=('ngApp' 'other-key-word') # Don't change these KEYS, just fill $REPLACE_KEYS with the corresponding values
+# Don't change $FIND_KEYS, just fill $REPLACE_KEYS with the corresponding values
+FIND_KEYS=('ngApp' 'other-key-word')
 REPLACE_KEYS=('newNgApp' 'other-value') # IMPORTANT: values can't contain spaces 
 #=============================================================
 

@@ -16,5 +16,6 @@
   "html": {
     "src": "src/**/*.html"
   },
-  "tasksPath": "./grunt/"
+  "tasksPath": "./grunt/",
+  "specs": "src/**/*.spec.js"
 }
