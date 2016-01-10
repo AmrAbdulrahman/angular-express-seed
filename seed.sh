@@ -14,12 +14,12 @@ SCRIPT_HOME=.
 TEMP_FILE_PATH=/tmp/find-n-replace.tmp
 
 # New project configuration, this section you need to fill!
-NEW_PROJ_REMOTE=git@github.com:AbuMuslimAmr/hanaa.git
-NEW_PROJ_NAME=hanaa
-INITIAL_COMMIT_MESSAGE="Oh goood!"
+NEW_PROJ_REMOTE=$1
+NEW_PROJ_NAME=$(echo "$1" | sed "s|[a-zA-Z0-9@:./]*/||g" | sed "s|.git||g")
+INITIAL_COMMIT_MESSAGE="initial commit"
 # Don't change $FIND_KEYS, just fill $REPLACE_KEYS with the corresponding values
 FIND_KEYS=('ngApp' 'other-key-word')
-REPLACE_KEYS=('newNgApp' 'other-value') # IMPORTANT: values can't contain spaces 
+REPLACE_KEYS=('newNgApp' 'other-value') # IMPORTANT: values can't contain spaces
 #=============================================================
 
 log() {
