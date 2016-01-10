@@ -12,10 +12,10 @@
 SEED_REPO=https://github.com/AbuMuslimAmr/angular-express-seed.git
 SCRIPT_HOME=.
 TEMP_FILE_PATH=/tmp/find-n-replace.tmp
-
-# New project configuration, this section you need to fill!
 NEW_PROJ_REMOTE=$1
 NEW_PROJ_NAME=$(echo "$1" | sed "s|[a-zA-Z0-9@:./]*/||g" | sed "s|.git||g")
+
+# New project configuration, this section you need to fill!
 INITIAL_COMMIT_MESSAGE="initial commit"
 # Don't change $FIND_KEYS, just fill $REPLACE_KEYS with the corresponding values
 FIND_KEYS=('ngApp' 'other-key-word')
