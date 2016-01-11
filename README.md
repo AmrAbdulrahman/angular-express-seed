@@ -17,7 +17,7 @@ I tried here to include most common libraries, check <strong>Stack</strong> sect
 1. Grant this script executable permission, run: <strong>chmod u+x seed.sh</strong> [(learn more)](https://en.wikipedia.org/wiki/Chmod)
 1. Create a new repository on your github or bitbucket
 1. Open up seed.sh using your favorite text editor, you'll need to configure a few stuff (more details in the section below).
-1. Run the script and pass the address to your new repository like so: <strong>bash seed.sh https://github.com/username/myProject.git</strong>
+1. Run the script and pass the address to your new repository like so: `bash seed.sh https://github.com/username/myProject.git`
 1. TADA! you have got everything ready for you, just start getting your hands dirty.
  
 ###Sample configurations:
