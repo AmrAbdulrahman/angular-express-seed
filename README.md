@@ -13,17 +13,16 @@ I tried here to include most common libraries, check <strong>Stack</strong> sect
 ## Seed
 ###It's very easy to start your own project using this seed repo:
 1. Download <strong>seed.sh</strong> here: https://github.com/AbuMuslimAmr/angular-express-seed/blob/master/seed.sh
-1. place this shell script wherever you need your project on your PC
-1. grant this script executable permission, run: <strong>chmod u+x seed.sh</strong> [(learn more)](https://en.wikipedia.org/wiki/Chmod)
-1. create a new repository on your github or bitbucket
-1. configure seed.sh using vim or any other text editor
-1. run the script: <strong>bash seed.sh</strong>
+1. Place this shell script wherever you need your project on your PC
+1. Grant this script executable permission, run: <strong>chmod u+x seed.sh</strong> [(learn more)](https://en.wikipedia.org/wiki/Chmod)
+1. Create a new repository on your github or bitbucket
+1. Open up seed.sh using your favorite text editor, you'll need to configure a few stuff (more details in the section below).
+1. Run the script and pass the address to your new repository like so: <strong>bash seed.sh https://github.com/username/myProject.git</strong>
 1. TADA! you have got everything ready for you, just start getting your hands dirty.
  
 ###Sample configurations:
+In the beginning of the seed.sh script you may want to change one or more of these values:
 ```
-NEW_PROJ_REMOTE=https://github.com/AbuMuslimAmr/test-clone.git
-NEW_PROJ_NAME=test-clone
 INITIAL_COMMIT_MESSAGE="Initial commit"
 FIND_KEYS=('ngApp' 'other-key-word')
 REPLACE_KEYS=('newNgApp' 'other-value')
