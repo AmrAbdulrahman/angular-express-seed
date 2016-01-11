@@ -21,7 +21,7 @@ I tried here to include most common libraries, check <strong>Stack</strong> sect
 1. TADA! you have got everything ready for you, just start getting your hands dirty.
  
 ###Sample configurations:
-In the beginning of the seed.sh script you may want to change one or more of these values:
+In the very beginning of the seed.sh script you may want to change one or more of these values:
 ```
 INITIAL_COMMIT_MESSAGE="Initial commit"
 FIND_KEYS=('ngApp' 'other-key-word')
