@@ -1,9 +1,27 @@
 #!/bin/bash
 
+# New project configuration, this section you need to fill!
+INITIAL_COMMIT_MESSAGE="initial commit"
+# Don't change $FIND_KEYS, just fill $REPLACE_KEYS with the corresponding values
+FIND_KEYS=('ngApp' 'other-key-word')
+REPLACE_KEYS=('newNgApp' 'other-value') # IMPORTANT: values can't contain spaces
+
 #=============================================================
 # Credits
 # Thanks to Mahmoud Adel: https://github.com/mahmoudadel2
 # He helped me building this script
+
+#=============================================================
+# Input Validation
+if [ -z "$1" ]; then
+	echo "Usage: bash $0 [address_to_remote_repo]"
+fi
+remote="$(echo $1 | sed "s|[a-zA-Z0-9@:./\-]*.git||g")"
+if [ -n "$remote" ]; then
+	NEW_PROJ_REMOTE="$(echo $1 | sed "s|[a-zA-Z0-9@:./\-]*|&.git|g")"
+else
+	NEW_PROJ_REMOTE=$1
+fi
 
 #=============================================================
 # Configuration Section
@@ -12,14 +30,8 @@
 SEED_REPO=https://github.com/AbuMuslimAmr/angular-express-seed.git
 SCRIPT_HOME=.
 TEMP_FILE_PATH=/tmp/find-n-replace.tmp
+NEW_PROJ_NAME=$(echo "$NEW_PROJ_REMOTE" | sed "s|[a-zA-Z0-9@:./]*/||g" | sed "s|.git||g")
 
-# New project configuration, this section you need to fill!
-NEW_PROJ_REMOTE=git@github.com:AbuMuslimAmr/hanaa.git
-NEW_PROJ_NAME=hanaa
-INITIAL_COMMIT_MESSAGE="Oh goood!"
-# Don't change $FIND_KEYS, just fill $REPLACE_KEYS with the corresponding values
-FIND_KEYS=('ngApp' 'other-key-word')
-REPLACE_KEYS=('newNgApp' 'other-value') # IMPORTANT: values can't contain spaces 
 #=============================================================
 
 log() {
